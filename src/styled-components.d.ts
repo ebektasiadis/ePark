@@ -1,4 +1,3 @@
-// import original module declarations
 import 'styled-components'
 
 // and extend them!
@@ -6,13 +5,15 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       white: string
-      eerieBlack: string
-      dukeBlue: string
-      murrey: string
-      poppy: string
-      orange: string
-      emerald: string
-      cerulean: string
+      black: string
+      primary: string
+      secondary: string
+      success: string
+      warning: string
+      danger: string
+      info: string
+      dark: string
+      light: string
     }
     spacings: {
       small: string

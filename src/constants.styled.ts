@@ -2,13 +2,14 @@ import { DefaultTheme, createGlobalStyle } from 'styled-components'
 
 const colors = {
   white: '#ffffff',
-  eerieBlack: '#1b1b1e',
-  dukeBlue: '#390099',
-  murrey: '#9e0059',
-  poppy: '#df2935',
-  orange: '#f3a712',
-  emerald: '#4cb963',
-  cerulean: '#006989',
+  black: '#000000',
+  primary: '#4169e1',
+  secondary: '#7a96ea',
+  success: '#00a468',
+  warning: '#ffd400',
+  danger: '#c50030',
+  info: '#0089c0',
+  dark: '#3c3c3c',
 }
 
 const spacings = {
