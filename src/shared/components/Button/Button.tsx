@@ -2,9 +2,9 @@ import { ButtonStylingProps, StyledButton } from './Button.styled'
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & ButtonStylingProps
 
-const Button = ({ variant, block, ...rest }: ButtonProps) => {
+const Button = ({ variant = 'primary', ...rest }: ButtonProps) => {
   return (
-    <StyledButton variant={variant ?? 'primary'} block={block} {...rest}>
+    <StyledButton variant={variant} {...rest}>
       {rest.children}
     </StyledButton>
   )

@@ -1,14 +1,14 @@
 import { Variant, Variants } from '$/shared/styles/variants'
 import styled, { css } from 'styled-components'
 
-export type ButtonStylingProps = { variant?: Variant | 'link'; block?: boolean }
+export type ButtonStylingProps = { variant?: Variant | 'link'; block?: boolean; large?: boolean; small?: boolean }
 
 const ButtonBase = css`
   color: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => theme.spacings.seminormal} ${({ theme }) => theme.spacings.normal};
   border: unset;
   border-radius: ${({ theme }) => theme.spacings.small};
-  font-size: ${({ theme }) => theme.spacings.normal};
+  font-size: ${({ theme }) => theme.fontSizes.normal};
 
   transition: filter 0.2s ease-out;
 `
@@ -41,6 +41,24 @@ export const StyledButton = styled.button<ButtonStylingProps>`
       css`
         display: block;
         width: 100%;
+      `
+    )
+  }}
+
+  ${({ large, theme }) => {
+    return (
+      large &&
+      css`
+        font-size: ${theme.fontSizes.large};
+      `
+    )
+  }}
+
+${({ small, theme }) => {
+    return (
+      small &&
+      css`
+        font-size: ${theme.fontSizes.small};
       `
     )
   }}
