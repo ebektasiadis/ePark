@@ -9,6 +9,7 @@ const ButtonBase = css`
   border: unset;
   border-radius: ${({ theme }) => theme.spacings.small};
   font-size: ${({ theme }) => theme.fontSizes.normal};
+  user-select: none;
 
   transition: filter 0.2s ease-out;
 `
@@ -54,7 +55,7 @@ export const StyledButton = styled.button<ButtonStylingProps>`
     )
   }}
 
-${({ small, theme }) => {
+  ${({ small, theme }) => {
     return (
       small &&
       css`
@@ -63,7 +64,18 @@ ${({ small, theme }) => {
     )
   }}
 
-  :hover {
-    filter: brightness(80%);
+  &[disabled] {
+    opacity: 75%;
+    ${({ theme, variant }) =>
+      variant === Variants.Light &&
+      css`
+        color: ${theme.colors.white};
+      `}
+  }
+
+  :not([disabled]) {
+    :hover {
+      filter: brightness(80%);
+    }
   }
 `

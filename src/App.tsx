@@ -14,14 +14,14 @@ const App = () => {
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', padding: '10px', background: 'lightgray' }}>
         {['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'dark', 'light', 'link'].map((color) => (
-          <Button key={color} variant={color as unknown}>
+          <Button key={color} variant={color as unknown} small>
             {color.charAt(0).toUpperCase() + color.substring(1)}
           </Button>
         ))}
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', padding: '10px', background: 'black' }}>
         {['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'dark', 'light', 'link'].map((color) => (
-          <Button key={color} variant={color as unknown}>
+          <Button key={color} variant={color} block disabled>
             {color.charAt(0).toUpperCase() + color.substring(1)}
           </Button>
         ))}
