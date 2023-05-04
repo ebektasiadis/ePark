@@ -22,5 +22,10 @@ declare module 'styled-components' {
       semilarge: string
       large: string
     }
+    fontSizes: {
+      large: string
+      normal: string
+      small: string
+    }
   }
 }

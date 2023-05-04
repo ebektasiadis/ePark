@@ -20,6 +20,12 @@ const spacings = {
   large: '48px',
 }
 
+const fontSizes = {
+  large: '1.125rem',
+  normal: '1rem',
+  small: '0.875rem',
+}
+
 export const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -33,4 +39,5 @@ export const GlobalStyle = createGlobalStyle`
 export default {
   colors,
   spacings,
+  fontSizes,
 } as DefaultTheme
